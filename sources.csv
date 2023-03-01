@@ -1,0 +1,21 @@
+name,Display Name,url,Type of Solution,Used For,API Documentation URL,example_request_method,example_request_endpoint_name,example_request_url,example_curl_api_call,Example API Endpoints,authentication_description,pagination_description,request_parameters_description,rate_limit_description
+us_census,U.S. Census Bureau,https://www.census.gov/,government statistical agency,"accessing facts and figures about America's people, places, and economy",https://www.census.gov/data/developers/data-sets.html,GET,acs,https://api.census.gov/data/2021/acs/acs1?get=NAME&group(B01001)&for=us:1&key=YOUR_KEY_GOES_HERE,,"- American Community Survey
+- Decennial Census
+- Economic Census
+- Population Estimates and Projections
+- Health Insurance Statistics
+- Poverty Statistics
+- Economic Indicators
+- Survey of Business Owners",,,,
+bitly,Bitly,https://bitly.com/,link management platform,"optimizing hyperlinks by controlling, distributing, analyzing, and shortening links to your content",https://dev.bitly.com/,GET,bitlinks,https://api-ssl.bitly.com/v4/bitlinks/{bitlink},"curl \
+-H 'Authorization: Bearer {TOKEN}' \
+-H 'Content-Type: application/json' \
+-X GET  \
+https://api-ssl.bitly.com/v4/bitlinks/{bitlink}","- Bitlinks
+- Campaigns
+- Custom Bitlinks
+- Groups
+- Organizations
+- Users","Your application can be authorized in one of two ways: by utilizing OAuth 2.0 tokens or an API key. To perform actions on behalf of end-users, you’ll need to authenticate them via OAuth 2. When a shortened link is created it will be added to a user’s history, allowing them to manage and track their links in the Bitly apps. You just need an API key if the request doesn't need authorization from other users.",Bitly uses page and size parameters for pagination.,"Some API endpoints require that the URL route contain unique identifiers from a prior API response.
+
+For instance, you require an group_guid returned from another API in order to obtain specific group information.",There are two types of rate limits that will affect usage: plan limits and platform limits. 100 calls per minute and five concurrent connections from a single IP address are the platform limits. Each client has a different plan cap.
